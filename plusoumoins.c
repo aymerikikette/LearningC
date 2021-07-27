@@ -6,27 +6,27 @@ int main()
 {
 	const int MAX = 100, MIN = 1;
 
-	int nombreMystere;
-	int nombreEntre;
+	int unknownNumber;
+	int enteredNumber;
 	srand(time(NULL));
-	nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
+	unknownNumber = (rand() % (MAX - MIN + 1)) + MIN;
 
-	while(nombreEntre != nombreMystere)
+	while(enteredNumber != unknownNumber)
 	{
-		printf("Quel est le nombre? : ");
-		scanf("%d", &nombreEntre);
+		printf("What's the number? : ");
+		scanf("%d", &enteredNumber);
 
-		if(nombreEntre < nombreMystere)
+		if(enteredNumber < unknownNumber)
 		{
-			printf("C'est plus!\n");
+			printf("It's more!\n");
 		}
-		else if(nombreEntre > nombreMystere)
+		else if(enteredNumber > unknownNumber)
 		{
-			printf("C'est moins!\n");
+			printf("It's less!\n");
 		}
 		else
 		{
-			printf("Bravo! Vous avez trouvé le nombre mystère!\n");
+			printf("Well done! You found the mysterious number!\n");
 		}
 	}
 
